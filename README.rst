@@ -20,6 +20,7 @@ Usage
 -----
 
 ::
+
    import logging
    import yamllogger
 
@@ -34,7 +35,8 @@ Example output
 --------------
 
 ::
-   - to: follow
+
+   # to follow
 
 .. _YAML: http://en.wikipedia.org/wiki/YAML
 .. |travis_status| image:: https://secure.travis-ci.org/wewriteapps/python-yaml-logger.png
