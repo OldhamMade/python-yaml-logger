@@ -4,25 +4,30 @@ if sys.version_info < (2, 6):
     print(sys.stderror, "Your python is {}".format(sys.version))
     sys.exit(1)
 
-from setuptools import setup
+from setuptools import setup, find_packages
+
+execfile('src/__version__.py')
 
 setup(
-    name = "python-json-logger",
-    version = "0.0.2",
-    url = "http://github.com/madzak/python-json-logger",
-    license = "BSD",
-    description = "A python library adding a json log formatter",
-    author = "Zakaria Zajac",
-    author_email = "zak@madzak.com",
+    name = "python-yaml-logger",
+    version = __version__,
+    url = "http://github.com/wewriteapps/python-yaml-logger",
+    license = "MIT",
+    description = "YAML formatter for the standard Python logging module",
+    author = "Phillip B Oldham",
+    author_email = "phillip.oldham@gmail.com",
     package_dir = {'': 'src'},
-    packages = [''],
-#    use_2to3 = True, 
-    test_suite = "tests.tests",
-    install_requires = ['setuptools'],
+    packages = find_packages(exclude="specs"),
+    #use_2to3 = True,
+    #test_suite = "tests.tests",
+    install_requires = [
+        'setuptools',
+        'PyYAML',
+        ],
     classifiers = [
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
