@@ -1,0 +1,24 @@
+language: python
+
+python:
+  - "2.6"
+  - "2.7"
+
+branches:
+  only:
+    - master
+    - develop
+    - /^feature\/.*/
+
+install:
+  - python bootstrap.py
+  - bin/buildout
+
+#before_script:
+#  - "pep8 --exclude=migrations --ignore=E501,E225 src"
+
+script: bin/specs
+
+notifications:
+  email:
+    - phillip.oldham@gmail.com
