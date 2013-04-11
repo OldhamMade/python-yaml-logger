@@ -36,7 +36,11 @@ Example output
 
 ::
 
-   # to follow
+   - asctime: 2013-04-10 15:39:26,014
+     created: 1365604766.014612
+     levelname: INFO
+     message: test message
+     name: logger_name
 
 .. _YAML: http://en.wikipedia.org/wiki/YAML
 .. |travis_status| image:: https://secure.travis-ci.org/wewriteapps/python-yaml-logger.png
