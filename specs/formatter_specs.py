@@ -21,7 +21,7 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 
-sys.path.insert(0, os.path.abspath('../src'))
+sys.path.insert(0, os.path.abspath('../yamlformatter'))
 import yamlformatter
 
 
