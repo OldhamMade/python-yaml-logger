@@ -1,6 +1,8 @@
 python-yaml-logger
 ==================
 
+|travis_status|_
+
 Overview
 --------
 ``python-yaml-logger`` is a formatter for the standard Python logging module designed to allow formatting log data as YAML_. Using YAML allow for both human- and machine-readable log files, and allows developers to quickly parse and make better use of log data.
@@ -44,3 +46,4 @@ Example output
 
 .. _YAML: http://en.wikipedia.org/wiki/YAML
 .. |travis_status| image:: https://secure.travis-ci.org/wewriteapps/python-yaml-logger.png
+.. _travis_status: https://secure.travis-ci.org/wewriteapps/python-yaml-logger
