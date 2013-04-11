@@ -2,11 +2,11 @@ import datetime
 import logging
 import re
 
-from yaml import load, dump
+from yaml import dump
 try:
-    from yaml import CLoader as Loader, CDumper as Dumper
+    from yaml import CDumper as Dumper
 except ImportError:
-    from yaml import Loader, Dumper
+    from yaml import Dumper
 
 # skip natural LogRecord attributes
 # http://docs.python.org/library/logging.html#logrecord-attributes
@@ -48,7 +48,7 @@ class YAMLFormatter(logging.Formatter):
         ]
 
     def __init__(self, *args, **kwargs):
-        super(YAMLFormatter, self).__init__(*args, **kwargs)
+        logging.Formatter.__init__(self, *args, **kwargs)
         self._required_fields = self.parse()
         self._required_fields += self.default_fields
         self._skip_fields = dict(zip(self._required_fields,
