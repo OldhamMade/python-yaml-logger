@@ -6,7 +6,7 @@ if sys.version_info < (2, 6):
 
 from setuptools import setup, find_packages
 
-execfile('src/__version__.py')
+execfile('yamlformatter/__version__.py')
 
 setup(
     name = "python-yaml-logger",
