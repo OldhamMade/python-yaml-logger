@@ -16,7 +16,6 @@ setup(
     description = "YAML formatter for the standard Python logging module",
     author = "Phillip B Oldham",
     author_email = "phillip.oldham@gmail.com",
-    package_dir = {'': 'src'},
     packages = find_packages(exclude="specs"),
     #use_2to3 = True,
     #test_suite = "tests.tests",

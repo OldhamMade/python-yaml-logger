@@ -69,5 +69,5 @@ nosetests.xml
 #Mr Developer
 .mr.developer.cfg
 
-
-
+# dist
+*.egg-info
