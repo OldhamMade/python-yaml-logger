@@ -177,3 +177,14 @@ class YAMLFormatterSpec(unittest.TestCase):
                 set(self.default_fields),
                 set(record.keys())
                 )
+
+    def it_should_handle_unicode_log_messages(self):
+        formatter = yamlformatter.YAMLFormatter()
+        self.logHandler.setFormatter(formatter)
+
+        msg = u"test message with unicode character: \xe7"
+        self.logger.info(msg)
+
+        for record in load(self.buffer.getvalue()):
+            self.assertEqual(set(self.default_fields), set(record.keys()))
+            self.assertEqual(record['message'], msg)

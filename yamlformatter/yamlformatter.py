@@ -2,11 +2,11 @@ import datetime
 import logging
 import re
 
-from yaml import dump
+from yaml import dump, safe_dump
 try:
-    from yaml import CDumper as Dumper
+    from yaml import CDumper as Dumper, CSafeDumper as SafeDumper
 except ImportError:
-    from yaml import Dumper
+    from yaml import Dumper, SafeDumper
 
 # skip natural LogRecord attributes
 # http://docs.python.org/library/logging.html#logrecord-attributes
@@ -86,4 +86,5 @@ class YAMLFormatter(logging.Formatter):
         log_record.update(extras)
         merge_record_extra(record, log_record)#, reserved=self._skip_fields)
 
-        return dump([log_record,], Dumper=Dumper, default_flow_style=False)
+        #return dump([log_record,], Dumper=Dumper, default_flow_style=False, allow_unicode=True)
+        return safe_dump([log_record,], default_flow_style=False, allow_unicode=True)
