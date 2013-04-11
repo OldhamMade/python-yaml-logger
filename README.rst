@@ -24,11 +24,11 @@ Usage
 ::
 
    import logging
-   import yamllogger
+   import yamlformatter
 
    logger = logging.getLogger()
    logHandler = logging.FileHandler('my.yamllog')
-   formatter = yamllogger.YAMLFormatter()
+   formatter = yamlformatter.YAMLFormatter()
    logHandler.setFormatter(formatter)
    logger.addHandler(logHandler)
 
