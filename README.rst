@@ -13,7 +13,7 @@ Installation
 
 Manual installation::
 
-  $ wget http://github.com/wewriteapps/python-yaml-logger/archive/master.tar.gz -O- | tar zx
+  $ wget http://github.com/OldhamMade/python-yaml-logger/archive/master.tar.gz -O- | tar zx
   $ cd python-yaml-logger-master
   $ python setup.py install
 
@@ -45,5 +45,5 @@ Example output
      name: logger_name
 
 .. _YAML: http://en.wikipedia.org/wiki/YAML
-.. |travis_status| image:: https://secure.travis-ci.org/wewriteapps/python-yaml-logger.png
-.. _travis_status: https://secure.travis-ci.org/wewriteapps/python-yaml-logger
+.. |travis_status| image:: https://secure.travis-ci.org/OldhamMade/python-yaml-logger.png
+.. _travis_status: https://secure.travis-ci.org/OldhamMade/python-yaml-logger
